@@ -251,6 +251,9 @@ void onWsEvent(AsyncWebSocket *server, AsyncWebSocketClient *client,
 }
 
 void setup() {
+  pinMode(LED_BUILTIN, OUTPUT);
+  digitalWrite(LED_BUILTIN, LOW);   // XIAO's onboard LED is active LOW (LOW = ON)
+
   Serial.begin(115200);
 
   // PWM setup (ESP32 core 3.x LEDC API)
@@ -324,4 +327,5 @@ void loop() {
     Serial.printf("[Monitor] Motor A (pin %d): %3u/255   Motor B (pin %d): %3u/255   clients: %u\n",
                   MOTOR_A_PIN, speedA, MOTOR_B_PIN, speedB, ws.count());
   }
+  
 }
