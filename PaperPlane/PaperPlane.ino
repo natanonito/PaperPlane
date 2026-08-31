@@ -46,7 +46,7 @@ const char* AP_PASSWORD = "12345678"; // min 8 chars
 #define MOTOR_A_PIN 2   // D1
 #define MOTOR_B_PIN 3   // D2
 
-const int PWM_FREQ = 20000;   // 20 kHz: above audible range, quiet motors
+const int PWM_FREQ = 2000;   // 20 kHz: above audible range, quiet motors
 const int PWM_RES  = 8;       // 8-bit -> duty 0-255
 
 const unsigned long FAILSAFE_TIMEOUT_MS = 400; // stop motors if link goes quiet
